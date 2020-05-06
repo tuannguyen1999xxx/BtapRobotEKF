@@ -76,7 +76,7 @@ while(i<=N)
                     1/b_wheel -1/b_wheel];
                 
     sig = sqrt((0.5^2)/12);
-    Q = [sig*vL2(i)^2 0; 0 sig*vR2(i)^2];
+    Q = [sig*(vL2(i)^2) 0; 0 sig*(vR2(i)^2)];
     R = [10*sig 0 0; 0 10*sig 0; 0 0 sig];
     P=A*P*A'+W*Q*W'; %3x3
     K=P/(P+R); %3x3
